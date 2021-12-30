@@ -1,4 +1,4 @@
-import TouristCardItem from "./components/TouristCardItem"
+import TouristCardItem from "../components/TouristCardItem"
 
 const data = [
   {
@@ -20,7 +20,7 @@ const data = [
     review: 1200,
   },
 ]
-function App() {
+function TravelPage() {
   return (
     <div>
       <h1 className="text-4xl font-medium text-center mt-20">Explore Top Destinations</h1>
@@ -39,4 +39,4 @@ function App() {
   )
 }
 
-export default App
+export default TravelPage;
