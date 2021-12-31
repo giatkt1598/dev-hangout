@@ -95,7 +95,7 @@ export default function MessageContainer({
   ]
   return (
     <div {...other} className={`${className ?? ''}
-    p-2 overflow-y-auto
+    p-2 
     `}>
       <Scrollbar style={{maxHeight: 600}}>
         {
