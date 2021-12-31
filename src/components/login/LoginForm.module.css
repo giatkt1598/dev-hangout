@@ -1,0 +1,4 @@
+.input {
+    @apply border-solid border-gray-200 border-2 p-2 rounded-md mt-1
+        w-full focus:outline-none focus:border-purple-400 block;
+}
