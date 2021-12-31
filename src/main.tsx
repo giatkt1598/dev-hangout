@@ -4,9 +4,11 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import "simplebar/src/simplebar.css";
 import Router from './router'
+import { Toaster } from 'react-hot-toast';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Toaster />
     <BrowserRouter>
       <Router />
     </BrowserRouter>
