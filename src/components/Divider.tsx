@@ -17,14 +17,12 @@ export default function Divider({
     ${className ?? ''}`} style={{
       ...orientation !== 'vertical' && {
         height: 1,
-        marginTop: spacing,
-        marginBottom: spacing,
+        margin: `${spacing}px auto`,
       },
       ...orientation === 'vertical' && {
         width: 1,
         height: 'inherit',
-        marginRight: spacing,
-        marginLeft: spacing,
+        margin: `auto ${spacing}px`,
       },
       ...style
     }} {...other}/>
