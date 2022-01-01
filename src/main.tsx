@@ -8,7 +8,7 @@ import { Toaster } from 'react-hot-toast';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Toaster />
+    <Toaster position='top-right' />
     <BrowserRouter>
       <Router />
     </BrowserRouter>

@@ -1,4 +1,4 @@
-import { useRoutes } from "react-router";
+import { Navigate, useRoutes } from "react-router";
 import Chatting from "../pages/Chatting";
 import LoginPage from "../pages/LoginPage";
 import TravelPage from "../pages/TravelPage";
@@ -6,13 +6,18 @@ import TravelPage from "../pages/TravelPage";
 export default function Router() {
   return useRoutes([
     {
-      path: "/",
+      path: '/',
+      element: <Navigate to="/login" />,
+    },
+    {
+      path: "/travel",
       element: <TravelPage />
     },
     {
       path: '/login',
       element: <LoginPage />
-    }, {
+    }, 
+    {
       path: "/chat",
       element: <Chatting />
     }

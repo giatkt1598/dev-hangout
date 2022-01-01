@@ -97,7 +97,7 @@ export default function MessageContainer({
     <div {...other} className={`${className ?? ''}
     p-2 
     `}>
-      <Scrollbar style={{maxHeight: 600}}>
+      <Scrollbar style={{maxHeight: 'calc(100vh - 130px)'}}>
         {
           messages.map((message, idx) => (
             <MessageItem data={message} key={idx}/>

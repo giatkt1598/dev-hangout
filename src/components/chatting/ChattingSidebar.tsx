@@ -1,4 +1,4 @@
-import { notify, notify2 } from "../../utils/toastUtils";
+import PrimaryButton from "../PrimaryButton";
 import SearchBox from "./SearchBox";
 import SidebarHeader from "./SidebarHeader";
 import UserList from "./UserList";
@@ -7,8 +7,8 @@ export default function ChattingSidebar() {
   return (
     <div className="h-full border-r-2 w-72 flex flex-col gap-4">
       <SidebarHeader />
-      <button onClick={() => notify2()}>click</button>
       <SearchBox />
+      <PrimaryButton>Create group</PrimaryButton>
       <UserList />
     </div>
   )

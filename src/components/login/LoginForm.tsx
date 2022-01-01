@@ -1,12 +1,16 @@
 import { HTMLAttributes } from "react";
 import styles from './LoginForm.module.css';
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router";
+import { PATH } from "../../router/path";
 export default function LoginForm({
   className,
   ...other
 }: HTMLAttributes<HTMLDivElement>) {
+  const navigate = useNavigate();
   const onSubmit = (values: unknown) => {
     console.log(values);
+    navigate(PATH.chat);
   }
   const {handleSubmit, register} = useForm({
     defaultValues: {

@@ -2,8 +2,8 @@ import { ChatBox, ChatHeader, ChattingSidebar, MessageContainer, SenderPreview }
 
 export default function Chatting() {
   return (
-    <div className="flex flex-row m-auto max-w-7xl pt-32"
-      style={{height: '90vh'}}>
+    <div className="flex flex-row m-auto"
+      style={{height: '100vh'}}>
       <ChattingSidebar />
       <div className="flex flex-col flex-1">
         <ChatHeader/>

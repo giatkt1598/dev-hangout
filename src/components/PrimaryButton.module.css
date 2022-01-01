@@ -1,0 +1,9 @@
+.primaryButton {
+    background: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+    @apply p-1 mx-4 my-2 rounded-md text-white tracking-wide font-medium;
+}
+
+.primaryButton:hover {
+    box-shadow: rgb(54, 26, 113, 0.5) 0 1px 15px;
+    transition: .1s;
+}
