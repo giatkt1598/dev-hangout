@@ -4,10 +4,14 @@ import styles from './Popover.module.css';
 interface PopoverProps {
     trigger: ReactNode,
     children: ReactNode,
+    position?: 'top' | 'bottom',
+    onBeforeClose?: () => void,
 }
 export default function Popover({
   children,
   trigger,
+  position = 'bottom',
+  onBeforeClose,
 }: PopoverProps) {
   const [open, setOpen] = useState(false);
   const triggerRef = createRef<HTMLDivElement>();
@@ -25,6 +29,10 @@ export default function Popover({
     }
   }, [triggerRef.current])
   
+  const handleClose = () => {
+    onBeforeClose && onBeforeClose();
+    setOpen(false);
+  }
   return (
     <div className={styles.popover}>
       <span
@@ -33,15 +41,22 @@ export default function Popover({
         {trigger}
       </span>
       {
-        open && <div className={styles.popoverContent} style={{
-          top: triggerSize.height / 2,
-          left: triggerSize.width + 10,
-        }}>
-          {children}
-        </div>
-      }
-      {
-        open && <div className={styles.backdrop} onClick={() => setOpen(false)} />
+        open && <>
+          <div className={styles.popoverContent} style={{
+            ...position === 'bottom' && {
+              top: triggerSize.height / 2,
+              left: triggerSize.width + 10,
+            },
+            ...position === 'top' && {
+              top: triggerSize.height / 2,
+              left: triggerSize.width + 10,
+              transform: 'translateY(-100%)'
+            }
+          }}>
+            {children}
+          </div>
+          <div className={styles.backdrop} onClick={handleClose} />
+        </>
       }
     </div>
   )

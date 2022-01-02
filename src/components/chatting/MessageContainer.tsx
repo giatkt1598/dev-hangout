@@ -1,6 +1,5 @@
 import { HTMLAttributes } from "react";
 import MessageItem from "./MessageItem";
-import Scrollbar from 'simplebar-react'
 export default function MessageContainer({
   className,
   ...other
@@ -95,15 +94,13 @@ export default function MessageContainer({
   ]
   return (
     <div {...other} className={`${className ?? ''}
-    p-2 
+    p-2 overflow-y-auto
     `}>
-      <Scrollbar style={{maxHeight: 'calc(100vh - 130px)'}}>
-        {
-          messages.map((message, idx) => (
-            <MessageItem data={message} key={idx}/>
-          ))
-        }
-      </Scrollbar>
+      {
+        messages.map((message, idx) => (
+          <MessageItem data={message} key={idx}/>
+        ))
+      }
     </div>
   )
 }

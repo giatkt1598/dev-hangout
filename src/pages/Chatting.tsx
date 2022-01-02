@@ -8,8 +8,9 @@ export default function Chatting() {
       <div className="flex flex-col flex-1">
         <ChatHeader/>
         <div className="flex flex-row flex-1">
-          <div className="flex-1 flex flex-col">
-            <MessageContainer className="flex-1"/>
+          <div className="flex-1 flex flex-col" 
+            style={{maxHeight: 'calc(100vh - 65px)' }}>
+            <MessageContainer className="flex-grow"/>
             <ChatBox />
           </div>
           <SenderPreview />

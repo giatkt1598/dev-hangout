@@ -799,6 +799,11 @@ electron-to-chromium@^1.4.17:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.30.tgz#0f75a1dce26dffbd5a0f7212e5b87fe0b61cbc76"
   integrity sha512-609z9sIMxDHg+TcR/VB3MXwH+uwtrYyeAwWc/orhnr90ixs6WVGSrt85CDLGUdNnLqCA7liv426V20EecjvflQ==
 
+emoji-picker-react@^3.4.12:
+  version "3.4.12"
+  resolved "https://registry.yarnpkg.com/emoji-picker-react/-/emoji-picker-react-3.4.12.tgz#4fc7a1f0e00241d3f9bd04172e25a3a08c0d8ada"
+  integrity sha512-i2VRfKRltFJjsY5ste7UPOn24uXcb4yuOVU6u9Cm3gsSc1MvCqr3XsBGhhhK8jPLeDB9llWtFQ6vABZSqNKQxA==
+
 enquirer@^2.3.5:
   version "2.3.6"
   resolved "https://registry.yarnpkg.com/enquirer/-/enquirer-2.3.6.tgz#2a7fe5dd634a1e4125a975ec994ff5456dc3734d"
